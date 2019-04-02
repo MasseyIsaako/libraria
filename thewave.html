@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Libraria</title>
+	
+	<!-- Viewport Used for Responsive Design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<!-- Meta Data -->
+	<meta name="Description" content="Owned by Whitcoulls, explore our friendly online community library! Borrow books from fellow users or list your own items!">
+
+	<meta name="Keywords" content="Peer to peer, Libraria, Whitcoulls, Online Library">
+
+	<meta name="Author" content="Massey Isa'ako">
+    
+	<!-- Connect to Stylesheet (OOCSS Methodology) -->
+    <link rel="stylesheet" type="text/css" href="css/viewitem-style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<!-- Navigation -->
+		<div id="nav">			
+			<div id="uppernav">
+				<div id="trigger">
+			      <i class="fa fa-navicon" style="font-size:15px;color:#fff"></i>
+			    </div>
+
+				<a href="home.html">
+					<img src="images/logo.png" alt="This is the Whitcoulls Logo">
+				</a>
+
+				<form action="#">
+					<input type="submit" value="Search" class="default-text">
+					<input type="search" placeholder="Search by keyword, product, title or Author" name="librariasearch" class="default-text">
+				</form>
+			</div>
+			
+			<div id="lowernav" class="default-text">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="browse.html">View Listings</a></li>
+					<li><a href="home.html#genre">View Genres</a></li>
+					<li><a href="additem.html">List an Item</a></li>
+					<li><a href="index.html">Logout</a></li>
+				</ul>
+
+				<form action="#">
+					<input type="search" placeholder="Search for books!" name="librariasearch" class="default-text">
+					<input type="submit" value="Search" class="default-text">
+				</form>
+
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div id="main-container">
+
+			<!-- Overlay Navigation -->
+			<div id="open">
+			    <i style="font-size:24px;cursor:pointer;" id="exit" class="fa">&#xf00d;</i>
+				<div id="text">
+					<h1>Libraria</h1>
+					<ul class="default-text">
+					    <li><a href="home.html">Home</a></li>
+					    <li><a href="browse.html">View Listings</a></li>
+					    <li><a href="home.html#genre">View Genres</a></li>
+					    <li><a href="additem.html">List an Item</a></li>
+					    <li><a href="index.html">Logout</a></li>
+					</ul>
+				</div>
+		    </div>
+
+			<div class="box default-text">
+				<div class="title-img center">
+					<img src="images/thewave.jpg" alt="This is an image for a book named Trouble Tomorrow.">
+				</div>
+
+				<div class="text-content">
+					<h3>The Wave</h3>
+					<p>The Wave is based on a true incident that occured in a high school history class in Palo Alto, California, in 1969.The powerful forces of group pressure that pervaded many historic movements such as Nazism are recreated in the classroom when history teacher Burt Ross introduces a new system to his students. And before long The Wave, with its rules of strength through discipline, community, and action, sweeps from the classroom through the entire school. And as most of the students join the movement, Laurie Saunders and David Collins recognize the frightening momentum of The Wave and realize they must stop it before it's too late.</p>
+
+					<hr>
+				</div>
+
+				<div class="product-info">
+
+					<h4>Item Information</h4>
+
+					<ul>
+						<li><strong>Author:&nbsp;</strong>Todd Strasser</li>
+						<li><strong>Genre:&nbsp;</strong>Young Adult</li>
+						<li><strong>Pages:&nbsp;</strong>84</li>
+						<li><strong>Condition:&nbsp;</strong>New</li>
+						<li><strong>Age Group:&nbsp;</strong>Teenager</li>
+						<li><strong>Delivery time (days):&nbsp;</strong>4</li>
+						<li><strong>Borrow time (days):&nbsp;</strong>14</li>
+						<li><strong>Shipping cost (NZD):&nbsp;</strong>$2.99</li>
+					</ul>
+				</div>
+
+				<div class="purchase-info center">
+					<h3>$6.00</h3>
+
+					<a href="purchaseTheWave.html" class="red-button button">Borrow Now!</a>
+				</div>
+			</div>
+
+			<div class="box default-text no-border">
+				<div class="title-img center">
+					<img src="images/lender.jpg" alt="This is an image of the book lender.">
+				</div>
+
+				<div class="text-content">
+					<h3>Lender: Tama Wairau</h3>
+					<h4>Anonymous Hamster</h4>
+
+					<p>"A great lender, well worth the price to read. Would definitely borrow books again in the near future."</p>
+
+					<img src="images/fourfive.png" alt="This is an image of a four out of five star rating.">
+
+					<hr>
+
+					<h4>Contact Details</h4>
+
+					<p><strong>Email:&nbsp;</strong><u>tamawairau@hotmail.com</u></p>
+					<p><strong>Phone:&nbsp;</strong><i>021 123 4567</i></p>
+
+				</div>
+			</div>
+			
+
+			<div class="footer">
+				<div class="upperfooter">
+					<form action="emailSuccess.html">
+
+						<p class="default-text center">Subscribe for Weekly Updates</p>
+
+						<input type="email" name="subscribe" placeholder="Email" class="default-text no-border" required>
+
+						<input type="submit" value="Submit" class="default-text grey-button button">
+
+					</form>
+				</div>
+				
+				<div class="lowerfooter default-text">
+					<a class="center" href="http://www.whitcoulls.co.nz/faq.html;pgid=H8RQiLfFa_1SRpYKz2TqNLUc0000OJ3fNChj;sid=_7hZzeGNBxYUzLiDF0nV2PEhXNroLb2qAKHBgkPp" target="_blank">Frequently Asked Questions</a>
+					<br>
+					<a class="center" href="http://www.whitcoulls.co.nz/whitcoullsstores.html" target="_blank">Store Locator</a>
+					<br>
+					<a class="center" href="http://www.whitcoulls.co.nz/cms/Whitcoulls_History" target="_blank">Whitcoulls History</a>
+					<p>This website is for educational purposes only. Images used were retrieved from Search Creative Commons. All rights are reserved to the respective owners.</p>
+					<p>Copyright &#169; 2017 | Designed by Massey Isa'ako</p>
+					<img src="images/ccsearch.png" alt="This is the Search Creative Commons Logo.">
+				</div>
+			</div>
+
+		</div>
+
+		<a href="#">
+			<div class="up">
+				<i class="fa fa-arrow-up" aria-hidden="true"></i>
+			</div>
+		</a>
+
+	</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+		<script type="text/javascript" src="js/fullnav.js"></script>
+
+</body>
+
+</html>

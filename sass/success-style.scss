@@ -1,0 +1,29 @@
+// Importing the base, mediaquery and variable/mixin stylesheets
+@import "base/base.scss" ,"base/mediaqueries.scss" ,"base/var_mix.scss";
+
+// Styling the list information to say that the task was completed successfully
+.box{
+	padding-bottom:100px;
+
+	ul{
+		list-style-type: $remove;
+	    width:80%;
+	    margin:$null 10%;
+	    padding-left:$null;
+	}
+
+	li, strong, i, u{
+		margin-top:5px;
+		width:$full;
+		text-align:center;
+	}
+
+	a{
+		margin-top:20px;
+		width:30%;
+		margin-left:35%;
+		padding:10px;
+		border-radius:5px;
+	}
+}
+

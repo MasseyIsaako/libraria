@@ -1,0 +1,124 @@
+// Importing the base, mediaquery and variable/mixin stylesheets
+@import "base/base.scss" ,"base/mediaqueries.scss" ,"base/var_mix.scss";
+
+h3{
+	margin-top:100px;
+}
+
+.box{
+	padding-bottom:150px;
+
+	p{
+		width:60%;
+		margin-left:20%;
+	}
+}
+
+/*Container for home image, styling with border color and border radius. Padding created for content*/
+.home-img{
+	background-image:url('../images/homeimg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	width:$full;
+	margin-top:50px;
+	height:auto;
+	border-bottom-right-radius:50px;
+	border-bottom-left-radius:50px;
+	border-bottom:solid $primarycolor 2px;
+	padding:65px $null;
+}
+
+// Parallax Scrolling effect container
+.parallax{
+	width:$full;
+	height:100px;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top:solid $primarycolor 2px;
+    border-bottom:solid $primarycolor 2px;
+}
+
+// Classes to call up image to fill paralax container
+.parallax-img-1{
+	background-image:url('../images/libraryparallax1.jpg');
+}
+
+.parallax-img-2{
+	background-image:url('../images/libraryparallax2.jpg');
+}
+
+/*Thumbnail Styles for featured genres and listings*/
+.thumbnail{
+	width:30%;
+	margin:50px 1.66%;
+	height:400px;
+	margin-top:10px;
+	padding:10px;
+
+	img{
+		width:$half;
+		margin:10px 25%;
+		height:auto;
+		border-radius:10px;
+		@include dropshadow();
+	}
+}
+
+.thumb-img{
+	width:$full;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+	a{
+		width:$full;
+		margin:$null;
+		padding:5px 10px;
+		border-radius:5px;
+	}
+}
+
+/*Mediquery*/
+@media only screen and (max-width:767px) {
+	.home-img {
+		margin-top:30px;
+		padding:0px;
+
+		h1{
+			font-size:42px;
+			margin-top:75px;
+		}
+
+		h2{
+			font-size:28px;
+			margin:50px 0px 50px 0px;
+		}
+	}
+
+	.box p{
+		width:80%;
+		margin-left:10%;
+	}
+}
+
+/*Thumbnail Resizing*/
+@media only screen and (min-width:421px) and (max-width:500px){
+	.thumbnail{
+		width:$full;
+		display:inline-block;
+		margin:10px $null 150px $null;
+	}
+}
+
+@media only screen and (max-width:420px){
+	.thumbnail{
+		width:$full !important;
+		display:inline-block;
+		margin-top:20px;
+	}
+}

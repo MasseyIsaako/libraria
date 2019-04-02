@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Libraria</title>
+	
+	<!-- Viewport Used for Responsive Design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<!-- Meta Data -->
+	<meta name="Description" content="Owned by Whitcoulls, explore our friendly online community library! Borrow books from fellow users or list your own items!">
+
+	<meta name="Keywords" content="Peer to peer, Libraria, Whitcoulls, Online Library">
+
+	<meta name="Author" content="Massey Isa'ako">
+    
+	<!-- Connect to Stylesheet (OOCSS Methodology) -->
+    <link rel="stylesheet" type="text/css" href="css/additem-style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<!-- Navigation -->
+		<div id="nav">			
+			<div id="uppernav">
+				<div id="trigger">
+			      <i class="fa fa-navicon" style="font-size:15px;color:#fff"></i>
+			    </div>
+
+				<a href="home.html">
+					<img src="images/logo.png" alt="This is the Whitcoulls Logo">
+				</a>
+
+				<form action="#">
+					<input type="submit" value="Search" class="default-text">
+					<input type="search" placeholder="Search by keyword, product, title or Author" name="librariasearch" class="default-text">
+				</form>
+			</div>
+			
+			<div id="lowernav" class="default-text">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="browse.html">View Listings</a></li>
+					<li><a href="home.html#genre">View Genres</a></li>
+					<li><a href="additem.html">List an Item</a></li>
+					<li><a href="index.html">Logout</a></li>
+				</ul>
+
+				<form action="#">
+					<input type="search" placeholder="Search for books!" name="librariasearch" class="default-text">
+					<input type="submit" value="Search" class="default-text">
+				</form>
+
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div id="main-container">
+
+			<!-- Overlay Navigation -->
+			<div id="open">
+			    <i style="font-size:24px;cursor:pointer;" id="exit" class="fa">&#xf00d;</i>
+				<div id="text">
+					<h1>Libraria</h1>
+					<ul class="default-text">
+					    <li><a href="home.html">Home</a></li>
+					    <li><a href="browse.html">View Listings</a></li>
+					    <li><a href="home.html#genre">View Genres</a></li>
+					    <li><a href="additem.html">List an Item</a></li>
+					    <li><a href="index.html">Logout</a></li>
+					</ul>
+				</div>
+		    </div>
+
+			<div class="box default-text">
+				<h3>List Your Book</h3>
+				<h4 class="center">Whakararangi Koutou Pukapuka</h4>
+
+				<div class="list-item">
+					<form autocomplete="on" id="SubmitForm" action="listsuccess.html" method="POST" enctype="multipart/form-data"> 
+						
+					<fieldset>
+
+						<label for="author">Author Name:</label>
+						<input type="text" id="author" name="author" placeholder="Who wrote the book?" maxlength="25" required autofocus>
+
+						<br>
+
+						<label for="booktitle">Book Title: </label>
+						<input type="text" id="booktitle" name="booktitle" placeholder="Book Title" maxlength="100" required>
+						
+						<br>
+
+						<label for="genre">Genre: </label>
+						<br>
+						<select name="genre" id="genre" required>
+							<option value="" selected>Please select a genre</option>
+							<option value="fiction">Fiction</option>
+							<option value="biotrue">Biography and True Story</option>
+							<option value="youngadult">Young Adult</option>
+							<option value="business">Business</option>
+							<option value="children">Childrens Book</option>
+							<option value="travel">Travel</option>
+							<option value="cookbook">Cookbook</option>
+							<option value="other">Other</option>
+						</select>
+						
+						<label for="pages">Number of Pages: </label>
+						<input type="number" id="pages" name="pages" placeholder="Pages" min="1" required>
+
+						<br>
+
+						<label for="condition">Condition of Book: </label>
+						<select name="condition" id="condition" required>
+							<option value="" selected>Please select a condition</option>
+							<option value="new">New</option>
+							<option value="weartear">Normal wear and tear</option>
+							<option value="poor">Poor</option>
+						</select>
+
+						<br>
+
+						<label for="age">Age Group of Book:</label>
+						<select id="age" name="age" required>
+							<option value="" selected>Please select an age group</option>
+							<option value="child">Child</option>
+							<option value="teenager">Teenager</option>
+							<option value="adult">Adult</option>
+						</select>
+					</fieldset>
+
+					<fieldset>
+
+					 	<br>
+
+					 	<label for="borrow">Maximum borrow time (days): </label>
+					 	<input type="number" id="borrow" name="borrow" placeholder="Days to borrow item" min="3" required>
+
+					 	<label for="price">Borrow price (NZD): </label>
+					 	<input type="number" id="price" name="price" placeholder="Cost to borrow" min="0" required>
+
+					 	<label for="ship">Shipping cost (NZD): </label>
+					 	<input type="number" id="ship" name="ship" placeholder="Cost of shipment" min="0" required>
+					</fieldset>
+
+					<fieldset>
+					 	<br>
+
+					 	<label for="bookimg">Upload Product Image: </label>
+					 	<input type="file" id="bookimg" accept="image/*" required>
+
+					 	<br>
+
+					 	<label for="blurb">Book Blurb: </label>
+					 	<textarea id="blurb" name="blurb" placeholder="What's your book about?" cols="100" rows="20" required></textarea>
+					 </fieldset>
+
+					 <fieldset>
+					 <br>
+					 	<input type="submit"  id="SubmitButton" value="List Book Now!" class="red-button button">
+					 </fieldset>
+
+					</form>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="upperfooter">
+					<form action="emailSuccess.html">
+
+						<p class="default-text center">Subscribe for Weekly Updates</p>
+
+						<input type="email" name="subscribe" placeholder="Email" class="default-text no-border" required>
+
+						<input type="submit" value="Submit" class="default-text grey-button button">
+
+					</form>
+				</div>
+				
+				<div class="lowerfooter default-text">
+					<a class="center" href="http://www.whitcoulls.co.nz/faq.html;pgid=H8RQiLfFa_1SRpYKz2TqNLUc0000OJ3fNChj;sid=_7hZzeGNBxYUzLiDF0nV2PEhXNroLb2qAKHBgkPp" target="_blank">Frequently Asked Questions</a>
+					<br>
+					<a class="center" href="http://www.whitcoulls.co.nz/whitcoullsstores.html" target="_blank">Store Locator</a>
+					<br>
+					<a class="center" href="http://www.whitcoulls.co.nz/cms/Whitcoulls_History" target="_blank">Whitcoulls History</a>
+					<p>This website is for educational purposes only. Images used were retrieved from Search Creative Commons. All rights are reserved to the respective owners.</p>
+					<p class="clear">Copyright &#169; 2017 | Designed by Massey Isa'ako</p>
+					<img src="images/ccsearch.png" alt="This is the Search Creative Commons logo.">
+				</div>
+			</div>
+
+		</div>
+
+		<a href="#">
+			<div class="up">
+				<i class="fa fa-arrow-up" aria-hidden="true"></i>
+			</div>
+		</a>
+
+	</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+		<script type="text/javascript" src="js/fullnav.js"></script>
+		<script type="text/javascript" src="js/listing.js"></script>
+
+</body>
+
+</html>

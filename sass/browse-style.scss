@@ -1,0 +1,166 @@
+// Importing the base, mediaquery and variable/mixin stylesheets
+@import "base/base.scss" ,"base/mediaqueries.scss" ,"base/var_mix.scss";
+
+.footer{
+	margin-top:100px;
+}
+
+/*Container for home image*/
+.home-img {
+	background-image: url('../images/library-borrow.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: $full;
+	height: auto;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	border-bottom: solid $primarycolor 2px;
+	padding:100px $null 50px $null;
+
+	h2{
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+  
+	p {
+		color: #fff;
+		font-size: 14px;
+		margin-top:$null;
+	}
+}
+
+h3{
+	margin-top:20px;
+}
+
+h4{
+	margin-bottom:50px;
+}
+
+/*Thumbnail Styles*/
+.thumbnail {
+	position: relative;
+	width: 15%;
+	margin: 50px 5%;
+	height: auto;
+	margin-top: 10px;
+
+	img {
+		width: 80%;
+		margin: $null 10%;
+		height: auto;
+		border-radius: 5px;
+		@include dropshadow();
+	}
+}
+
+// Red overlay for thumbnail images
+.img-overlay {
+	position: absolute;
+	background-color: $primarycolor;
+	opacity: 0.9;
+	bottom:$null;
+	left:$null;
+	transition: ease 0.5s;
+	height: 0%;
+	width: 80%;
+	margin: $null 10%;
+	border-radius: 5px;
+}
+
+// Overlay text for the thumbnail images
+.overlay-text {
+	width: $full;
+	height: $full;
+	margin: $null;
+
+	p{
+		color: #fff;
+		display: $remove;
+		margin-top:30px;
+		margin-bottom:40px;
+		width:80%;
+		font-size:14px;
+		text-align:center;
+	}
+
+	i, strong{
+		width:$full;
+		text-align:center;
+	}
+
+	a{
+		width:$full;
+		height:$full;
+	}
+}
+
+// Activating the image verlay wo 100% width through hovering over image thumbnail
+.thumbnail:hover .img-overlay {
+	height: $full;
+
+	p {
+		display: block;
+	}
+}
+
+// Browse page mediaquery
+@media only screen and (max-width:767px){
+// Browse Page
+	.home-img {
+		padding-top:20px;
+
+		h1 {
+			font-size: 40px;
+			margin-top: 100px;
+		}
+
+		h2 {
+			font-size: 20px;
+			margin-bottom: 20px;
+			margin-top:10px;
+		}
+	}
+
+	.thumbnail {
+		width: 49%;
+		margin: 10px 0.5% 20px 0.5%;
+	}
+
+	.overlay-text p{
+		font-size:25px !important;
+	}
+}
+
+@media only screen and (max-width: 907px) {
+		.img-overlay {
+			height: 50%;
+		}
+
+		.overlay-text {
+			height: 50%;
+			top: 0;
+			left: 0;
+			margin: 0;
+			display:block;
+
+			p{
+				margin-top:15px;
+				font-size:10px;
+				display:block !important;
+			}
+		}
+}
+
+@media only screen and (min-width:908px){
+	.overlay-text p{
+		font-size:16px;
+	}
+}
+
+@media only screen and (max-width:600px){
+	.overlay-text p{
+		font-size:16px !important;
+	}
+}

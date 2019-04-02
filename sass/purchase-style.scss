@@ -1,0 +1,73 @@
+// Importing the base, mediaquery and variable/mixin stylesheets
+@import "base/base.scss" ,"base/mediaqueries.scss" ,"base/var_mix.scss";
+
+/*Listing Form container styles and content styling*/
+.buy-item{
+	width:80%;
+	height:auto;
+	margin:$null 10%;
+	padding:30px;
+
+	form{
+		width:80%;
+		margin:$null 10%;
+	}
+
+	input, select{
+		margin:$null;
+		padding:10px;
+		width:$full;
+		font-size:14px;
+		border:$remove;
+		border-bottom:solid $secondarycolor 1px;
+		margin-bottom:15px;
+
+		&[type="submit"]{
+		width:40%;
+		margin:30px 30%;
+		border-radius:5px;
+		padding:15px;
+		}
+	}
+
+	label{
+		margin-top:20px;
+		width:auto;
+		font-weight:bold;
+	}
+}
+
+// Styling the invisible container that separates the input fields into groups.
+fieldset{
+	width:$full;
+	border:$remove;
+}
+
+textarea{
+	width:$full;
+	margin-top:10px;
+}
+
+// For pre entered input regarding the item being purchased
+input:disabled{
+	background-color:#999;
+	color:#000;
+}
+
+/*Media Queries*/
+@media only screen and (max-width:907px) {
+	.buy-item{
+		padding:10px;
+		width:$full;
+		margin-left:$null;
+		margin-right:$null;
+	
+		input[type="submit"]{
+			width:60%;
+			margin:30px 20%;
+			border-radius:5px;
+			padding:15px;
+		}
+	}
+
+}

@@ -1,0 +1,65 @@
+// Importing the base, mediaquery and variable/mixin stylesheets
+@import "base/base.scss" ,"base/mediaqueries.scss" ,"base/var_mix.scss";
+
+/*Login Container form styling*/
+.login-container{
+	width:$full;
+	padding:5% 5% 5% 5%;
+	height:auto;
+
+	/*Login Form*/
+	form{
+		width:80%;
+		padding:20px;
+		margin:$null 10%;
+		
+		 a{
+			width:80%;
+			margin:10px 10% $null 10%;
+		}
+	}
+
+	/*Login Input*/
+	input{
+		width:80%;
+		margin:$null 10%;
+		margin-top:30px;
+		font-family:'Open Sans', sans-serif;
+		font-size:14px;
+		padding:15px;
+	}
+
+	/*Submit Button*/
+	input[type="submit"]{
+		width:40%;
+		margin:$null 30% 20px 30%;
+		margin-top:50px;
+		padding:10px;
+		border:$remove;
+		border-radius:5px;
+	}
+}
+
+/*Styling Class for borders*/
+.no-border{
+	border:$remove;
+	border-bottom:solid $secondarycolor 1px;
+	background:$remove;
+}
+
+/*Text Style Unique to index.html (login page)*/
+h1, h2{
+	font-family:'Open Sans', sans-serif;
+	color:$primarycolor;
+	font-size:24px;
+	text-align:center;
+	width:$full;
+	margin:100px auto $null auto;
+}
+
+h2{
+	margin-top:10px;
+	font-size:20px;
+	font-weight:normal;
+	color:$secondarycolor;
+}

@@ -1,0 +1,12 @@
+// Setting Variables
+$primarycolor:#ee2e24;
+$secondarycolor:#333;
+$half:50%;
+$full:100%;
+$null:0;
+$remove:none;
+
+// Mixin for dropshadow adds a boxshadow to every element with @include dropshadow().
+@mixin dropshadow(){
+	box-shadow:$null $null 10px $secondarycolor;
+}

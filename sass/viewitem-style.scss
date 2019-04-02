@@ -1,0 +1,160 @@
+// Importing the base, mediaquery and variable/mixin stylesheets
+@import "base/base.scss" ,"base/mediaqueries.scss" ,"base/var_mix.scss";
+
+.box{
+	border-bottom:solid $primarycolor 1px;
+	padding-bottom:50px;
+
+	h3, h4{
+		margin-top:$null;
+		text-align:left;
+		padding-left:15px;
+		margin-bottom:10px;
+	}
+}
+
+/*Styling the book title and the image itself*/
+.title-img{
+	width:30%;
+	height:auto;
+	padding-top:100px;
+
+	img{
+		width:60%;
+		margin:10px 20%;
+		border-radius:5px;
+		@include dropshadow();
+	}
+}
+
+/*Styling the text content or the description of the product*/
+.text-content{
+	width:70%;
+	min-height:400px;
+	padding-top:100px;
+
+	p{
+		text-align:left;
+		margin-left:15px;
+		font-size:16px;
+	}
+
+	img{
+		margin-left:15px;
+		margin-bottom:20px;
+	}
+}
+
+// This is the container that holds the important details about the book.
+.product-info{
+	padding-top:$null;
+	width:30%;
+	padding-left:5%;
+
+	ul{
+	    list-style-type: $remove;
+	    text-align:left;
+		font-size:16px;
+		padding:$null;
+	}
+
+	ul li{
+		width:$full;
+	}
+
+	h4{
+		padding:$null;
+	}
+}
+
+// Horizontal rule is used to separate the advertisig aspect (blurb) from eseential information about book.
+hr{
+	width:80%;
+	margin:10px 20% 10px 15px;
+	border:dashed $primarycolor 1px;
+}
+
+// This holds the price and the button "Borrow Now!"
+.purchase-info{
+	width:35%;
+	height:auto;
+
+	h3{
+		margin-top:30px;
+		text-align:center;
+	}
+
+	a{
+		padding:15px;
+		border-radius:5px;
+		left:$half;
+		width:60%;
+		margin:10px 20%;
+	}
+}
+
+/*Media Queries*/
+@media only screen and (min-width: 908px) {
+	#main-container, .footer{
+		top:140px;
+	}
+}
+
+/*Mobile*/
+@media only screen and (max-width:767px) {
+	.title-img, .text-content, .product-info, .purchase-info{
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+		padding-left:$null !important;
+	}
+
+	.title-img{
+		padding-top:50px;
+	}
+
+	.text-content{
+		padding-top:35px;
+
+		p, h3, h4{
+			width:$full;
+			padding:10px;
+			margin:$null;
+			text-align:center;
+		}
+
+		img{
+			width:$half;
+			height:auto;
+			margin-left:25%;
+		}
+
+		hr{
+			width:$full;
+		}
+	}
+}
+
+@media only screen and (max-width:1275px) and (min-width:768px){
+	.purchase-info{
+		width:60%;
+	}
+}
+
+@media only screen and (max-width:1449px) and (min-width:1182px){
+	.product-info{
+		padding-left:50px;
+	}
+}
+
+@media only screen and (max-width:1181px) and (min-width:768px){
+	.product-info, .purchase-info{
+		width:70%;
+		float:right;
+		padding:15px;
+
+		ul, h4{
+			padding:$null;
+		}
+	}
+}

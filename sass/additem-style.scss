@@ -1,0 +1,69 @@
+// Importing the base, mediaquery and variable/mixin stylesheets
+@import "base/base.scss" ,"base/mediaqueries.scss" ,"base/var_mix.scss";
+
+/*Listing Form styles*/
+.list-item{
+	width:80%;
+	height:auto;
+	margin:0px 10%;
+	padding:30px;
+
+	form{
+		width:80%;
+		margin:0px 10%;
+	}
+
+	input, select{
+		margin:0px;
+		padding:10px;
+		font-size:14px;
+		width:$full;
+	}
+
+	label{
+		margin-top:20px;
+		width:auto;
+		font-weight:bold;
+	}
+
+	input[type="submit"]{
+		width:40%;
+		margin:30px 30%;
+		border-radius:5px;
+		padding:15px;
+	}
+
+	input{
+		border:$remove;
+		border-bottom:solid $secondarycolor 1px;
+	}
+}
+
+//Styling fieldsets and the text area
+fieldset{
+	width:$full;
+	border:$remove;
+}
+
+textarea{
+	width:$full;
+	margin-top:10px;
+	resize:$remove;
+}
+
+// List item media query
+@media only screen and (max-width:907px){
+	.list-item{
+		padding:0px;
+		width:100%;
+		margin-left:0px;
+		margin-right:0px;
+
+		input[type="submit"]{
+			width:65%;
+			margin:30px 17.5%;
+			border-radius:10px;
+			padding:15px;
+		}
+	}
+}

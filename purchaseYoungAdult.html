@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Libraria</title>
+	
+	<!-- Viewport Used for Responsive Design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<!-- Meta Data -->
+	<meta name="Description" content="Owned by Whitcoulls, explore our friendly online community library! Borrow books from fellow users or list your own items!">
+
+	<meta name="Keywords" content="Peer to peer, Libraria, Whitcoulls, Online Library">
+
+	<meta name="Author" content="Massey Isa'ako">
+    
+	<!-- Connect to Stylesheet (OOCSS Methodology) -->
+    <link rel="stylesheet" type="text/css" href="css/purchase-style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<!-- Navigation -->
+		<div id="nav">			
+			<div id="uppernav">
+				<div id="trigger">
+			      <i class="fa fa-navicon" style="font-size:15px;color:#fff"></i>
+			    </div>
+
+				<a href="home.html">
+					<img src="images/logo.png" alt="This is the Whitcoulls Logo">
+				</a>
+
+				<form action="#">
+					<input type="submit" value="Search" class="default-text">
+					<input type="search" placeholder="Search by keyword, product, title or Author" name="librariasearch" class="default-text">
+				</form>
+			</div>
+			
+			<div id="lowernav" class="default-text">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="browse.html">View Listings</a></li>
+					<li><a href="home.html#genre">View Genres</a></li>
+					<li><a href="additem.html">List an Item</a></li>
+					<li><a href="index.html">Logout</a></li>
+				</ul>
+
+				<form action="#">
+					<input type="search" placeholder="Search for books!" name="librariasearch" class="default-text">
+					<input type="submit" value="Search" class="default-text">
+				</form>
+
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div id="main-container">
+
+			<!-- Overlay Navigation -->
+			<div id="open">
+			    <i style="font-size:24px;cursor:pointer;" id="exit" class="fa">&#xf00d;</i>
+				<div id="text">
+					<h1>Libraria</h1>
+					<ul class="default-text">
+					    <li><a href="home.html">Home</a></li>
+					    <li><a href="browse.html">View Listings</a></li>
+					    <li><a href="home.html#genre">View Genres</a></li>
+					    <li><a href="additem.html">List an Item</a></li>
+					    <li><a href="index.html">Logout</a></li>
+					</ul>
+				</div>
+		    </div>
+
+			<div class="box default-text">
+				<h3>Payment</h3>
+				<h4 class="center">Utu</h4>
+
+				<div class="buy-item">
+					<form autocomplete="on" action="buysuccess.html" method="POST" enctype="multipart/form-data"> 
+						
+					<fieldset>
+
+						<label for="booktitle">Book Title: </label>
+						<input type="text" id="booktitle" name="booktitle" value="Trouble Tomorrow" disabled>
+
+						<label for="borrow">Maximum Borrow Time (days): </label>
+						<input type="number" id="borrow" name="borrow" value="14" disabled>
+
+						<label for="price">Borrow Price (NZD): </label>
+						<input type="text" id="price" name="price" value="$6.00" disabled>
+
+						<label for="ship">Shipping Cost (NZD): </label>
+						<input type="text" id="ship" name="ship" value="$2.99" disabled>
+
+						<label for="totalcost">Total Amount (NZD): </label>
+						<input type="text" id="totalcost" name="totalcost" value="$7.99" disabled>
+
+					</fieldset>
+
+					<fieldset>
+						<br>
+						<label for="payee">Payee: </label>
+						<input type="text" id="payee" name="payee" placeholder="Who are you paying?" maxlength="25" required autofocus>
+
+						<label for="accnum">Account No. </label>
+						<input type="number" id="accnum"  name="accnum" placeholder="Bnk - Brch - Account - Sfx" required>
+
+						<label for="reference">Reference: </label>
+						<input type="text" id="reference" name="reference" placeholder="Bank Statement Reference" maxlength="30" required>
+					</fieldset>
+
+					 <fieldset>
+					 <br>
+					 	<input type="submit" name="submit" value="Purchase Now!" class="red-button button">
+					 </fieldset>
+
+					</form>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="upperfooter">
+					<form action="emailSuccess.html">
+
+						<p class="default-text center">Subscribe for Weekly Updates</p>
+
+						<input type="email" name="subscribe" placeholder="Email" class="default-text no-border" required>
+
+						<input type="submit" value="Submit" class="default-text grey-button button">
+
+					</form>
+				</div>
+				
+				<div class="lowerfooter default-text">
+					<a class="center" href="http://www.whitcoulls.co.nz/faq.html;pgid=H8RQiLfFa_1SRpYKz2TqNLUc0000OJ3fNChj;sid=_7hZzeGNBxYUzLiDF0nV2PEhXNroLb2qAKHBgkPp" target="_blank">Frequently Asked Questions</a>
+					<br>
+					<a class="center" href="http://www.whitcoulls.co.nz/whitcoullsstores.html" target="_blank">Store Locator</a>
+					<br>
+					<a class="center" href="http://www.whitcoulls.co.nz/cms/Whitcoulls_History" target="_blank">Whitcoulls History</a>
+					<p>This website is for educational purposes only. Images used were retrieved from Search Creative Commons. All rights are reserved to the respective owners.</p>
+					<p>Copyright &#169; 2017 | Designed by Massey Isa'ako</p>
+					<img src="images/ccsearch.png" alt="This is the Search Creative Commons Logo.">
+				</div>
+			</div>
+
+		</div>
+
+		<a href="#">
+			<div class="up">
+				<i class="fa fa-arrow-up" aria-hidden="true"></i>
+			</div>
+		</a>
+
+	</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+		<script type="text/javascript" src="js/fullnav.js"></script>
+
+</body>
+
+</html>
